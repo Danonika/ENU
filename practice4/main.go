@@ -9,9 +9,19 @@ import (
 )
 
 func main() {
-	fmt.Println("En(1) or Ru(2) ?")
+	fmt.Println("En(1) or Ru(2) ? Press 3 to see instructions")
 	answer := 1
 	fmt.Scan(&answer)
+	if answer == 3 {
+		fmt.Println("text.txt - our input. On tetx.txt first line is key.\nOther lines are message or text which will be encrypted.\noutput.txt - is final answer or encrypted text")
+		os.Exit(0)
+	}
+	if answer == 1 {
+		fmt.Println("You choose English text encryption:")
+	}
+	if answer == 2 {
+		fmt.Println("You choose Russian text encryption:")
+	}
 	st := map[rune]int{
 		'А': 0,
 		'Б': 1,
@@ -104,6 +114,9 @@ func main() {
 			}
 			s += string(tmp)
 		}
+		s += "\n"
 		f2.Write([]byte(s))
+
 	}
+	fmt.Println("Please open output.txt to see full encrypted text")
 }

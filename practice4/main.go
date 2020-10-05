@@ -98,11 +98,10 @@ func main() {
 						tmp = pt[cnt]
 					} else {
 						cnt = int(st[unicode.ToUpper(x)] + st[arr[j]] + 1)
-						fmt.Println(st[arr[j]], st[unicode.ToUpper(x)])
 						if cnt > 31 {
 							cnt -= 32
 						}
-						tmp = pt[cnt]
+						tmp = unicode.ToLower(pt[cnt])
 					}
 				}
 

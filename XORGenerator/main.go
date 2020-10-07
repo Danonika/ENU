@@ -113,8 +113,8 @@ func main() {
 					}
 					fmt.Printf("%c -> %c\n", i, ch) // Print result of transformation
 				}
-				// fl2, _ := os.Create("output.txt")
-				// fl2.Write([]byte(output))
+				fl2, _ := os.Create("output.txt")
+				fl2.Write([]byte(output))
 			}
 		}
 	}

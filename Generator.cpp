@@ -5,7 +5,6 @@ const int a = 69069;
 const int b = 5;
 const long long m = (1ll << 32);
 const int cnt_test = 1; // Change it if u wanna make tests
-vector<long long> nums;
 double Gf,Lf;
 int main(){
     srand (time(NULL));
@@ -22,6 +21,8 @@ int main(){
     }
     printf("\nInitial values of [x=(a*x+c)%m] is a = %d, b = %d, m = %I64d, x - %I64d, length - %d\n\n",a,b,m,x,length);
     for(int test = 1; test <= cnt_test;test ++){
+    
+    vector<long long> nums;
     for(int i = 1;i <= length;i ++){
         x = (a*x+b) % m;
         nums.push_back(x);
